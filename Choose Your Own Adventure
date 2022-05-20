@@ -1,0 +1,359 @@
+//End 11
+#include <chplot.h>
+CPlot plot;
+string_t roadmap;
+string_t player, parrot, introChoice;
+string_t middleChoice1, sub_end, sub_middleChoice1, middleChoice2, middleChoice3;
+int end2_random_number, end4_random_number;
+
+printf("Before the adventure begins, would you like a roadmap? yes/no.\n");
+scanf("%s", &roadmap);
+while(roadmap != "yes" && roadmap != "Yes" && roadmap != "no" && roadmap != "no") {
+    printf("    **Error. Please choose a valid choice.**\n");
+    scanf("%s", &introChoice);
+}
+
+if(roadmap == "yes") {
+    printf("The character begins in the setting of nothingness. Meeting with the Unknown, they are somewhat guided through the adventure.\nThe character is granted a parrot, who acts as the second character and moral support (?) Afterwards, they are prompted with selecting one\nof three doors.\n\n");
+    printf("The first door leads to a city on a floating cloud island. You are almost immediately asked to either explore or\ncontinue into a nearby house. Exploring will leave you to become lost during the evenings and die. By continuing into the house, you will be safe. Once again, you are prompted to choose from two options. Either you accept the gift from the\nUnknown or the parrot. The Unknown grants a finch staff and an ice blade, which leads to a one in two chance that you\nsurvive and kill both the wyverns and harpies. The parrot grants the Book of Razorblade Typhoons. You are guranteed to live.\n\n");
+    printf("The second door leads to the character being placed in a bee hive inside the jungle. You may select (again) one of\nthree actions: to back away, to provoke Queen Bee's larva, or recieve an item from the Unknown. To back away gives you\na two in three chance of tripping, and Queen Bee sending a wave of bees to kill you To provoke, you will awaken Queen Bee and \nwill die once again Finally, the item from the parrot is the Zenith, and you are capable of killing Queen Bee in an instant.\n\n");
+    printf("The third door drops you into the raging waters of a river, leading to a waterfall. Paused, the Unknown\nasks you to choose: to either try swimming against the current, waiting it out, or do nothing and hope for the best.\nSwimming against the current buys you time for your parrot to carry you out. Waiting it out gives you spikes to grab\nonto, but they are too fragile and you still fall. Doing nothing, you somehow miraculously live :)\n\n");
+    delay(5000);
+}
+    
+if(roadmap == "no") {
+    printf("");
+    delay(2000);
+}
+
+
+
+printf("Proceeding to adventure...\n");
+delay(2000);
+printf("...\n");
+delay(2000);
+printf("...\n");
+printf("\n");
+delay(2000);
+
+void introduction() {
+    printf("You begin in the infinite series of pitch darkness.\n");
+    printf("You shout only to be met with the echoing of your voice.\n");
+    delay(4000);
+    printf("And suddenly you hear the voice of Unknown, \"Greetings little one! You have been selected to participate in a game!\"\n");
+    delay(4000);
+    printf("\"What? What game??? Who are you? Where am I-\"\n");
+    delay(2500);
+    printf("\"Don't worry, you will find out shortly :)\"\n");
+    delay(4000);
+    printf("...\n");
+    delay(3000);
+    printf("\"What is your name?\"\n");
+    scanf("%s", &player);
+    delay(3000);
+    printf("\"You will recieve a little companion as well. Parrot I guess? Name him whatever you want.\"\n");
+    printf("A random parrot pops onto your shoulder. How colorful!\n");
+    scanf("%s", &parrot);
+    printf("\n");
+    delay(2000);
+    printf("\"So %s and %s!", player, parrot, " You will be selecting one of three doors (like every generic story ever woooo). Each door leads to a different environment and task to complete.\"\n");
+    delay(4000);
+    printf("The doors poof in front of you and you fall back. Why do you fall back?\n");
+    delay(2000);
+    printf("\"Go ahead, select a door!\" A, B, or C.\n");
+    scanf("%s", &introChoice);
+    while(introChoice != "A" && introChoice != "B" && introChoice != "C") {
+    printf("    **Error. Please choose a valid choice.**\n");
+    scanf("%s", &introChoice);
+    }
+    printf("\n");
+    delay(2000);
+}
+
+void middle1() {
+    printf("Door %s opens and you walk through.\n", introChoice);
+    delay(4000);
+    printf("And you fall and land on a cloud... island? %s flutters the way down.\n", parrot);
+    delay(3000);
+    printf("\"Welcome! You have arrived in the island of Nephos. Here, you will be tasked with fighting off the wyverns and harpies of the island.\n");
+    printf("\"They will arrive at dark.\" The Unknown's voice echoes across the evening sky.\n");
+    delay(5000);
+    printf("And you declare into the clouds, \"You expect me to do that how???\"\n");
+    delay(3000);
+    printf("\"Not my problem :) Have fun!\" As their voice fades away.\"\n");
+    delay(4000);
+    printf("Do you wish to explore (E) the island or continue (C) to the nearby house?\n");
+    scanf("%s", &middleChoice1);
+    while(middleChoice1 != "C" && middleChoice1 != "E") {
+        printf("    **Error. Please choose a valid choice.**\n");
+        scanf("%s", &middleChoice1);
+    }
+    printf("\n");
+    delay(2000);
+}
+
+void end1 () {
+    printf("You follow a trail and explore the island. Despite %s's suggestion to not take a detour through the forests, you take it anyway and become lost.\n", parrot);
+    delay(4000);
+    printf("Unable to find your way back, it reaches sunset and you panic.\n");
+    delay(1500);
+    printf("Once again, Unknown's voice appears. \"Oh boy, how did we end up here?\"\n");
+    delay(1000);
+    printf("\"HELP???\" you shout.\n");
+    delay(1000);
+    printf("\"Well, there's certainly not much else I can do from here.\"\n");
+    delay(3000);
+    printf("A tailwind of razor sharp feathers comes flying by. You are struck by them and die, while %s just flies away. Yikes.", parrot);
+}
+
+void sub_end1() {
+    printf("\"You chose the smart option. Well done!\" the Unknown congratulates you.\n");
+    delay(2000);
+    printf("\"You will now have to make another decision. Either choose to recieve a random selection \nof items from me, the Unknown (U) or your recent parrot friend (P) over there.\"\n");
+    scanf("%s", &sub_middleChoice1);
+    while(sub_middleChoice1 != "U" && sub_middleChoice1 != "P") {
+        printf("    **Error. Please choose a valid choice.**\n");
+        scanf("%s", &sub_middleChoice1);
+    }
+    printf("\n");
+}
+
+void end2() {
+    printf("\"Very well! The items to assist you in defeating the creatures are... a finch staff and the ice blade?\"\n");
+    delay(3000);
+    printf("\"Uhhh... that wasn't supposed to happen. Good luck to you anyways!\" And the Unknown poofs out of there.\n");
+    delay(3000);
+    printf("As you hesitantly step out of the house with %s and the two items, the night arrives.\n", parrot);
+    delay(3000);
+    printf("You activate the finch staff and a finch spawns (who knew!) It only flies into the wyverns and harpies to peck at them.\n");
+    printf("\n");
+    delay(4000);
+    end2_random_number = randint(1,2);
+    if (end2_random_number == 1) {
+        printf("Miraculously and with the swipe of your ice blade, the gigantic icy bolt hits every one of them.\n");
+        delay(2000);
+        printf("They fall out of the sky. You did it!\n");
+        }
+    if (end2_random_number == 2) {
+        printf("With a swipe of your ice blade, the smallest of icy bolts come out. It has the shoddy modifier. Why does it have the shoddy modifier :(\n");
+        delay(2000);
+        printf("You are met with a gust of razor feathers from the harpies and die. %s flies away in dissapointment.\n", parrot);
+        
+    }
+}
+
+void end3() {
+    printf("\"Alrighty then, and the item to assist you in fighting the creatures is... the book of razorblade typhoons!\"\n");
+    delay(3000);
+    printf("You look to the right of your shoulder to see %s.\n", parrot);
+    delay(2000);
+    printf("You step out of the house as the night arrives. With the summoning of the typhoons,\nyou easily wipe out the wyverns and harpies, deflecting the feather projectiles. And yeah, you completed the task and live!\n");
+}
+
+
+
+void middle2() {
+    printf("Door %s opens and you walk through.\n", introChoice);
+    delay(3000);
+    printf("You have arrived in a giant bee hive and are frozen in place!\n");
+    delay(2000);
+    printf("\"Welcome %s!", player, "\" Everything will resume shortly.\"\n");
+    delay(3000);
+    printf("You look around and see the lakes of honey.\n");
+    delay(2000);
+    printf("\"For the door you've chosen, you have been lead into the hive of Queen Bee. As long as you live, you will have completed the task.\"\n");
+    delay(4000);
+    printf("\"Either carefully back away (B) from Queen Bee's larva, provoke (P) the larva, or accept (A) my gift to you. Choose wisely.\"\n");
+    scanf("%s", &middleChoice2);
+    while(middleChoice2 != "B" && middleChoice2 != "P" && middleChoice2 != "A") {
+        printf("    **Error. Please choose a valid choice.**\n");
+        scanf("%s", &middleChoice2);
+    }
+    printf("\n");
+    delay(3000);
+}
+
+void end4 () {
+    end4_random_number = randint(1,3);
+    if (end4_random_number == 1 || end4_random_number == 2) {
+        printf("Nervously and quietly backing away from the larva, you trip and fall, disrupting the hive. Queen Bee wasn't woken right?\n");
+        delay(3000);
+        printf("The larva begins twitching. What have you done?\n");
+        delay(2000);
+        printf("\"Uhh..?\" %s is literally on the verge of flying away.\n", parrot);
+        delay(2000);
+        printf("Queen Bee emerges from the larva, sending a wave of furious bees toward you.\n");
+        delay(2500);
+        printf("\"Not much I can do though...\" the Unknown's voice resonates within the hive.\n");
+        delay(2000);
+        printf("As you tirelessly and frightenedly run through the hive, slowed by the stickiness of the floor of honey.\n");
+        delay(2500);
+        printf("The bees continue to approach as Queen Bee poisons the both of you, leading to a slow and painful death.\n");
+    }
+    if (end4_random_number == 3) {
+        printf("You slowly back away.\n");
+        delay(3000);
+        printf("...\n");
+        delay(200);
+        printf("Nothing happens. Nothing.\n");
+        delay(2000);
+        printf("The Unknown watches. \"Go ahead, do something?\"\n");
+        delay(3000);
+        printf("You refuse, while %s awkwardly sits there on your shoulder for a solid minute.\n");
+        delay(2000);
+        printf("\"Um, you did what I asked of you I guess? Good job, you completed the task in the most awkward way possible.\"\n");
+    }
+}
+
+void end5 () {
+    printf("You have a random object in your pocket. Across the pools of honey, you throw it at the larva.\n");
+    delay(2000);
+    printf("The object is absorbed into the larva on impact. Shivers run down your spine (and %s's as well).\n", parrot);
+    delay(4000);
+    printf("The larva bursts open, and Queen Bee sends a sequence of stingers towards you.\n");
+    delay(3000);
+    printf("You and your parrot are struck without time to react. While %s explodes into a poof of feathers.\n", parrot);
+}
+
+void end6 () {
+    printf("Accepting the Unknown's gift. You recieve the Zenith.\n");
+    delay(2000);
+    printf("Upon use, you immediately waken Queen Bee and send your parrot aback. Queen Bee attempts to send a series of stingers towards you while charging.\n");
+    delay(3000);
+    printf("You slice her in half, and the hive as well with the strength of eighteen swords. Really messy way to die, yikes.\n");
+    delay(2000);
+    printf("You fall through the vines of the jungle caves, but manage to survive.\n");
+    delay(3000);
+    printf("\"Great job, you completed the task %s!\" (You won wooo)\n", player);
+}
+
+
+
+void middle3() {
+    printf("Door %s opens and you walk through.\n", introChoice);
+    delay(2500);
+    printf("You fall through the clouds while passing by a random floating island with a weird house structure?\n");
+    delay(2000);
+    printf("And as you are about to plunge into the river, you are paused in place whilst mid-air.\n");
+    delay(3000);
+    printf("\"All right. So what will you do now? Fall into the river and go across the edge? Possibly survive? \nWho knows. As long as you live, you will have completed the task.\"\n");
+    delay(5000);
+    printf("Choose an option. Do you swim against (S) the current, wait and grab (G) onto the rocks near the edge of the waterfall,\n");
+    printf("or do nothing (D) and hope for the best?\n");
+    scanf("%s",&middleChoice3);
+    while(middleChoice3 != "S" && middleChoice3 != "G" && middleChoice3 != "D") {
+        printf("    **Error. Please choose a valid choice.**\n");
+        scanf("%s", &middleChoice3);
+    }
+    delay(1000);
+    printf("You are then promptly unfrozen.\n");
+    printf("\n");
+    delay(3000);
+}
+
+void end7 () {
+    printf("You attempt to swim against the river's current.\n");
+    delay(200);
+    printf("Though successful for the first couple of seconds, you eventually give out.\n");
+    delay(3000);
+    printf("As you reach closer and closer to the waterfall, %s miraculously races to carry you out of the current,\n", parrot);
+    printf("dropping you onto the riverbank (how big is this parrot?)\n");
+    delay(5000);
+    printf("And there is the voice once again. \"You managed to survive? You did it, you completed the task, or your parrot did. Good job or something?\"\n");
+}
+
+void end8 () {
+    printf("Approaching the rocks near the edge of the river, you grab hold of them.\n");
+    delay(2000);
+    printf("Your parrot friend, hovering above the river, nervously watches while still frozen in the air.\n");
+    delay(3000);
+    printf("You are actually able to hold onto the rocks for a decent while. That is until they begin to crack.\n");
+    delay(2000);
+    printf("The rock gives way. You go over the waterfall and fall to a painful death... ouch.\n");
+    
+}
+
+void end9 () {
+    printf("You do absolutely nothing and approach the edge of the waterfall. Why would you choose this?\n");
+    delay(3000);
+    printf("Your parrot friend, hovering above the river, nervously watches.\n");
+    delay(2000);
+    printf("As you go off of the edge, you fall... and somehow survive without injury? You swim to nearby land.\n");
+    delay(3000);
+    printf("\"However you managed to survive that, good job? You completed the task.\"\n");
+}
+
+
+
+void smiley_face () {
+    plot.fillColor("white");
+    plot.strokeColor("black");
+    plot.ellipse(18, 18, 9, 9, 0);
+    plot.fillColor("black");
+    plot.strokeColor("black");
+    plot.ellipse(16, 19, 1, 1, 0);
+    plot.fillColor("black");
+    plot.strokeColor("black");
+    plot.ellipse(20, 19, 1, 1, 0);
+    plot.fillColor("white");
+    plot.strokeColor("black");
+    plot.ellipse(18, 16.5, 3, 3, 0);
+    plot.fillColor("white");
+    plot.strokeColor("white");
+    plot.rectangle(15, 16.5, 6, 1.7);
+    plot.grid(PLOT_OFF);
+
+    plot.axisRange(PLOT_AXIS_XY, 0, 36);
+    plot.ticsRange(PLOT_AXIS_XY, 1);
+    plot.label(PLOT_AXIS_X, "in");
+    plot.label(PLOT_AXIS_Y, "in");
+    plot.sizeRatio(1);
+    plot.plotting();
+
+}
+
+
+
+int main() {
+    introduction();
+    if(introChoice == "A") {
+        middle1();
+        if(middleChoice1 == "E") {
+            end1();
+        }
+        if(middleChoice1 == "C") {
+            sub_end1();
+            if(sub_middleChoice1 == "U") {
+                end2();
+            }
+            if(sub_middleChoice1 == "P") {
+                end3();
+            }
+        }
+    }
+    if(introChoice == "B") {
+        middle2();
+        if(middleChoice2 == "B") {
+            end4();
+        }
+        if(middleChoice2 == "P") {
+            end5();
+        }
+        if(middleChoice2 == "A") {
+            end6();
+        }
+    }
+    if(introChoice == "C") {
+        middle3();
+        if(middleChoice3 == "S") {
+            end7();
+        }
+        if(middleChoice3 == "G") {
+            end8();
+        }
+        if(middleChoice3 == "D") {
+            end9();
+        } 
+    }
+    smiley_face();
+}
