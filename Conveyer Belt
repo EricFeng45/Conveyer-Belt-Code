@@ -1,0 +1,122 @@
+#include <linkbot.h>
+CLinkbotI robot1, robot2, robot3;
+//complete and tested
+
+string_t initial, finish;
+
+printf("Please enter the initial block placement:");
+scanf("%s", &initial);
+
+printf("Please enter the finishing block placement:");
+scanf("%s", &finish);
+
+if(initial == "U" && finish == "X") {
+    robot1.driveDistance(20, 1.75);
+}
+    
+if(initial == "U" && finish == "Y") {
+    robot1.driveDistance(12, 1.75);
+    robot1.setSpeed(5, 1.75);
+    robot1. driveDistance(-12, 1.75);
+    robot2.driveDistance(15.5, 1.75);
+    robot2.setSpeed(5, 1.75);
+    robot2.driveDistance(-5, 1.75);
+    robot3.turnRight(90, 1.75, 3.69);
+    robot3.driveDistance(15.5, 1.75);
+    robot3.turnLeft(90, 1.75, 3.69);
+    robot3.driveDistance(14, 1.75);
+}
+    
+if(initial == "U" && finish == "Z") {
+    robot1.driveDistance(12, 1.75);
+    robot1.setSpeed(5, 1.75);
+    robot1.driveDistance(-12, 1.75);
+    robot2.driveDistance(25.5, 1.75);
+    robot2.setSpeed(5, 1.75);
+    robot2.driveDistance(-5, 1.75);
+    robot3.turnRight(90, 1.75, 3.69);
+    robot3.driveDistance(5.5, 1.75);
+    robot3.turnLeft(90, 1.75, 3.69);
+    robot3.driveDistance(14, 1.75);
+}
+
+if(initial == "V" && finish == "X") {
+    robot1.turnLeft(90, 1.75, 3.69);
+    robot1.driveDistance(10, 1.75);
+    robot1.turnRight(90, 1.75, 3.69);
+    robot1.driveDistance(12, 1.75);
+    robot1.driveDistance(-12, 1.75);
+    robot1.turnRight(90, 1.75, 3.69);
+    robot1.driveDistance(10, 1.75);
+    robot1.turnLeft(90, 1.75, 3.69);
+    robot3.driveDistance(6, 1.75);
+    robot3.turnRight(90, 1.75, 3.69);
+    robot3.driveDistance(23.5, 1.75);
+    robot3.setSpeed(5, 1.75);
+    robot3.driveDistance(-5, 1.75);
+    robot1.driveDistance(20, 1.75);
+}
+
+if(initial == "V" && finish == "Y") {
+    robot1.turnLeft(90, 1.75, 3.69);
+    robot1.driveDistance(10, 1.75);
+    robot1.turnRight(90, 1.75, 3.69);
+    robot1.driveDistance(20, 1.75);
+}
+
+if(initial == "V" && finish == "Z") {
+    robot1.turnLeft(90, 1.75, 3.69);
+    robot1.driveDistance(10, 1.75);
+    robot1.turnRight(90, 1.75, 3.69);
+    robot1.driveDistance(12, 1.75);
+    robot1.setSpeed(5, 1.75);
+    robot1.driveDistance(-12, 1.75);
+    robot2.driveDistance(25, 1.75);
+    robot2.setSpeed(5, 1.75);
+    robot2.driveDistance(-5, 1.75);
+    robot3.turnRight(90, 1.75, 3.69);
+    robot3.driveDistance(5, 1.75);
+    robot3.turnLeft(90, 1.75, 3.69);
+    robot3.driveDistance(13, 1.75);
+}
+
+if(initial == "W" && finish == "X") {
+    robot1.turnLeft(90, 1.75, 3.69);
+    robot1.driveDistance(20, 1.75);
+    robot1.turnRight(90, 1.75, 3.69);
+    robot1.driveDistance(12, 1.75);
+    robot1.driveDistance(-12, 1.75);
+    robot1.turnRight(90, 1.75, 3.69);
+    robot1.driveDistance(20, 1.75);
+    robot1.turnLeft(90, 1.75, 3.69);
+    robot3.driveDistance(6, 1.75);
+    robot3.turnRight(90, 1.75, 3.69);
+    robot3.driveDistance(23.5, 1.75);
+    robot3.setSpeed(5, 1.75);
+    robot3.driveDistance(-5, 1.75);
+    robot1.driveDistance(20, 1.75);
+}
+
+if(initial == "W" && finish == "Y") {
+    robot1.turnLeft(90, 1.75, 3.69);
+    robot1.driveDistance(20, 1.75);
+    robot1.turnRight(90, 1.75, 3.69);
+    robot1.driveDistance(12, 1.75);
+    robot1.driveDistance(-12, 1.75);
+    robot1.turnRight(90, 1.75, 3.69);
+    robot1.driveDistance(10, 1.75);
+    robot1.turnLeft(90, 1.75, 3.69);
+    robot3.driveDistance(6, 1.75);
+    robot3.turnRight(90, 1.75, 3.69);
+    robot3.driveDistance(12.5, 1.75);
+    robot3.setSpeed(5, 1.75);
+    robot3.driveDistance(-5, 1.75);
+    robot1.driveDistance(20, 1.75);
+}
+
+if(initial == "W" && finish == "Z") {
+    robot1.turnLeft(90, 1.75, 3.69);
+    robot1.driveDistance(20, 1.75);
+    robot1.turnRight(90, 1.75, 3.69);
+    robot1.driveDistance(20, 1.75);
+}
