@@ -36,6 +36,9 @@ printf("...\n");
 printf("\n");
 delay(2000);
 
+
+
+//introduction
 void introduction() {
     printf("You begin in the infinite series of pitch darkness.\n");
     printf("You shout only to be met with the echoing of your voice.\n");
@@ -70,6 +73,9 @@ void introduction() {
     delay(2000);
 }
 
+
+
+//middle1
 void middle1() {
     printf("Door %s opens and you walk through.\n", introChoice);
     delay(4000);
@@ -92,6 +98,7 @@ void middle1() {
     delay(2000);
 }
 
+//end1
 void end1 () {
     printf("You follow a trail and explore the island. Despite %s's suggestion to not take a detour through the forests, you take it anyway and become lost.\n", parrot);
     delay(4000);
@@ -106,6 +113,7 @@ void end1 () {
     printf("A tailwind of razor sharp feathers comes flying by. You are struck by them and die, while %s just flies away. Yikes.", parrot);
 }
 
+//sub_end1
 void sub_end1() {
     printf("\"You chose the smart option. Well done!\" the Unknown congratulates you.\n");
     delay(2000);
@@ -118,6 +126,7 @@ void sub_end1() {
     printf("\n");
 }
 
+//end2
 void end2() {
     printf("\"Very well! The items to assist you in defeating the creatures are... a finch staff and the ice blade?\"\n");
     delay(3000);
@@ -142,6 +151,7 @@ void end2() {
     }
 }
 
+//end3
 void end3() {
     printf("\"Alrighty then, and the item to assist you in fighting the creatures is... the book of razorblade typhoons!\"\n");
     delay(3000);
@@ -152,6 +162,7 @@ void end3() {
 
 
 
+//middle2
 void middle2() {
     printf("Door %s opens and you walk through.\n", introChoice);
     delay(3000);
@@ -173,6 +184,7 @@ void middle2() {
     delay(3000);
 }
 
+//end4
 void end4 () {
     end4_random_number = randint(1,3);
     if (end4_random_number == 1 || end4_random_number == 2) {
@@ -205,6 +217,7 @@ void end4 () {
     }
 }
 
+//end5
 void end5 () {
     printf("You have a random object in your pocket. Across the pools of honey, you throw it at the larva.\n");
     delay(2000);
@@ -215,6 +228,7 @@ void end5 () {
     printf("You and your parrot are struck without time to react. While %s explodes into a poof of feathers.\n", parrot);
 }
 
+//end6
 void end6 () {
     printf("Accepting the Unknown's gift. You recieve the Zenith.\n");
     delay(2000);
@@ -229,6 +243,7 @@ void end6 () {
 
 
 
+//middle3
 void middle3() {
     printf("Door %s opens and you walk through.\n", introChoice);
     delay(2500);
@@ -251,6 +266,7 @@ void middle3() {
     delay(3000);
 }
 
+//end7
 void end7 () {
     printf("You attempt to swim against the river's current.\n");
     delay(200);
@@ -262,6 +278,7 @@ void end7 () {
     printf("And there is the voice once again. \"You managed to survive? You did it, you completed the task, or your parrot did. Good job or something?\"\n");
 }
 
+//end8
 void end8 () {
     printf("Approaching the rocks near the edge of the river, you grab hold of them.\n");
     delay(2000);
@@ -273,6 +290,7 @@ void end8 () {
     
 }
 
+//end9
 void end9 () {
     printf("You do absolutely nothing and approach the edge of the waterfall. Why would you choose this?\n");
     delay(3000);
@@ -285,6 +303,7 @@ void end9 () {
 
 
 
+//circle_with_smiley_face
 void smiley_face () {
     plot.fillColor("white");
     plot.strokeColor("black");
